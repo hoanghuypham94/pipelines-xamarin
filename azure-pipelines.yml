@@ -1,4 +1,12 @@
 # Xamarin.Android and Xamarin.iOS
+- task: XamariniOS@2
+  inputs:
+    solutionFile: '**/*.sln'
+    configuration: 'Release'
+    packageApp: true
+    runNugetRestore: false
+    signingIdentity: 'apk01'
+    signingProvisioningProfileID: 'Huy Pham'
 - task: AndroidSigning@3
   inputs:
     apkFiles: '**/*.apk'
